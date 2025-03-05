@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmoy Das - Automobile Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+        }
+
+        .gradient-bg {
+            background: #131321;
+            /* Dark gray for gradient backgrounds */
+        }
+
+        .gradient-text {
+            color: #ffffff;
+        }
+
+        .section-hover:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        .animate-title {
+            animation: changeTitle 6s infinite;
+        }
+
+        @keyframes changeTitle {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            53% {
+                opacity: 1;
+            }
+
+            66% {
+                opacity: 0;
+            }
+
+            86% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+        }
+
+        .banner {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1f2937;
+            /* Dark gray for banner */
+        }
+
+        .mobile-nav {
+            background: #374151;
+            /* Dark gray for mobile nav */
+        }
+
+        .mobile-nav a {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer {
+            background: #1f2937;
+            /* Dark gray for footer */
+        }
+
+        .footer a:hover {
+            color: #93c5fd;
+        }
+
+        .blog-bg {
+            background-image: url('assets/blog-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-divider {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            margin: 4rem 0;
+        }
+
+        #blog {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.811), rgba(21, 21, 21, 0.229), rgba(0, 0, 0, 0.886)), url('./assets/blog.jpg');
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth bg-gray-700">
+    <!-- Navigation Bar -->
+    <nav class="gradient-bg text-white py-4 fixed w-full top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Tanmoy Das</h1>
+            <div class="desktop-menu space-x-6">
+                <a href="#about" class="hover:text-blue-300">About</a>
+                <a href="#biography" class="hover:text-blue-300">Biography</a>
+                <a href="#jobs" class="hover:text-blue-300">Jobs</a>
+                <a href="#education" class="hover:text-blue-300">Education</a>
+                <a href="#skills" class="hover:text-blue-300">Skills</a>
+                <a href="#achievements" class="hover:text-blue-300">Achievements</a>
+                <a href="#contact" class="hover:text-blue-300">Contact</a>
+                <a href="#blog" class="hover:text-blue-300">Blog</a>
+            </div>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-nav" class="mobile-nav hidden text-white py-4">
+            <a href="#about" class="block px-4 py-2">About</a>
+            <a href="#biography" class="block px-4 py-2">Biography</a>
+            <a href="#jobs" class="block px-4 py-2">Jobs</a>
+            <a href="#education" class="block px-4 py-2">Education</a>
+            <a href="#skills" class="block px-4 py-2">Skills</a>
+            <a href="#achievements" class="block px-4 py-2">Achievements</a>
+            <a href="#contact" class="block px-4 py-2">Contact</a>
+            <a href="#blog" class="block px-4 py-2">Blog</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="banner text-white bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-6xl font-bold mb-4">
+                Hello, I'm <span class="">Tanmoy Das</span>
+            </h1>
+            <p class="text-2xl mb-8">An Innovative Automobile Engineer with 10+ Years of Experience</p>
+            <a href="#about"
+                class="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Explore
+                My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-gray-300">
+                    <p class="mb-4">I am Tanmoy Das, an Automobile Engineer with over a decade of experience in the
+                        automotive industry. I have worked with 3 renowned companies, contributing to innovative
+                        projects and solutions.</p>
+                    <p class="mb-4">My expertise lies in automotive design, project management, and sustainable
+                        engineering practices. I am passionate about creating efficient and eco-friendly vehicles that
+                        drive the future of transportation.</p>
+                    <p class="mb-4">I believe in continuous learning and innovation, always striving to push the
+                        boundaries of what’s possible in the automotive world.</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/profile.jpg" alt="Tanmoy Das" class="rounded-lg shadow-lg w-64 h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Biography Section -->
+    <section id="biography" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Biography</h2>
+            <div class="text-center">
+                <p class="text-lg">Born and raised in [Your City], I developed a passion for automobiles at a young age.
+                    Over the years, I have honed my skills and expertise in the field, working with top companies and
+                    delivering exceptional results.</p>
+                <p class="text-lg mt-4">My journey has been driven by a commitment to innovation and sustainability,
+                    ensuring that every project I undertake contributes to a greener future.</p>
+                <p class="text-lg mt-4">I am dedicated to mentoring young engineers and sharing my knowledge to inspire
+                    the next generation of automotive professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg section-hover">
+                    <h3 class="text-2xl font-semibold">Senior Engineer</h3>
+                    <p class="text-gray-300">Company A | 2018 - 2023</p>
+                    <p class="text-gray-300 mt-2">Led a team to develop eco-friendly engine designs and improved fuel
+                        efficiency by 15%.</p>
+                    <p class="text-gray-300 mt-2">Collaborated with cross-functional teams to deliver projects on time
+                        and within budget.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg section-hover">
+                    <h3 class="text-2xl font-semibold">Project Lead</h3>
+                    <p class="text-gray-300">Company B | 2015 - 2018</p>
+                    <p class="text-gray-300 mt-2">Managed multiple projects, ensuring timely delivery and adherence to
+                        quality standards.</p>
+                    <p class="text-gray-300 mt-2">Implemented agile methodologies to improve team productivity.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg section-hover">
+                    <h3 class="text-2xl font-semibold">Junior Engineer</h3>
+                    <p class="text-gray-300">Company C | 2013 - 2015</p>
+                    <p class="text-gray-300 mt-2">Assisted in the design and development of automotive components.</p>
+                    <p class="text-gray-300 mt-2">Gained hands-on experience with CAD software and prototyping tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">BSC in Automobile Engineering</h3>
+                    <p class="text-gray-300">[University Name] | 2009 - 2013</p>
+                    <p class="text-gray-300 mt-2">Graduated with honors, specializing in automotive design and
+                        sustainable engineering.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">Higher Secondary</h3>
+                    <p class="text-gray-300">[School Name] | 2007 - 2009</p>
+                    <p class="text-gray-300 mt-2">Completed with a focus on science and mathematics, laying the
+                        foundation for my engineering career.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">Certifications</h3>
+                    <p class="text-gray-300">Project Management & Sustainable Engineering</p>
+                    <p class="text-gray-300 mt-2">Certified in advanced project management and sustainable engineering
+                        practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">Automotive Design</h3>
+                    <p class="text-gray-300">Expertise in designing efficient and sustainable automotive systems.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">Project Management</h3>
+                    <p class="text-gray-300">Proven track record of managing complex projects.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center section-hover">
+                    <h3 class="text-xl font-semibold">CAD Software</h3>
+                    <p class="text-gray-300">Proficient in AutoCAD, SolidWorks, and other design tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Achievements</h2>
+            <div class="text-center">
+                <p class="text-lg">Led a team to develop an eco-friendly engine design.</p>
+                <p class="text-lg">Awarded "Employee of the Year" at Company A.</p>
+                <p class="text-lg">Published research papers on automotive innovations.</p>
+                <p class="text-lg">Recognized for contributions to sustainable engineering practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Contact Me</h2>
+            <div class="bg-gray-700 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name"
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-600 text-white">
+                    <input type="email" placeholder="Your Email"
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-600 text-white">
+                    <textarea placeholder="Your Message"
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-600 text-white"
+                        rows="5"></textarea>
+                    <button type="submit"
+                        class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-500 transition duration-300">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 blog-bg text-white bg-cover bg-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Blog</h2>
+            <div class="text-center">
+                <p class="text-lg">Coming soon! Stay tuned for my latest articles on automotive innovations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-blue-300">LinkedIn</a>
+                <a href="#" class="hover:text-blue-300">Twitter</a>
+                <a href="#" class="hover:text-blue-300">GitHub</a>
+            </div>
+            <p class="text-lg">&copy; 2023 Tanmoy Das. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+        // Scroll Animations
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.75) {
+                    section.classList.add('animate-fade-in');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
