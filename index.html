@@ -127,7 +127,9 @@
     <!-- Navigation Bar -->
     <nav class="gradient-bg text-white py-4 fixed w-full top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Tanmoy Das</h1>
+            <a href="index.html">
+                <h1 class="text-2xl font-bold">Tanmoy Das</h1>
+            </a>
             <div class="desktop-menu space-x-6">
                 <a href="#about" class="hover:text-blue-300">About</a>
                 <a href="#biography" class="hover:text-blue-300">Biography</a>
@@ -163,7 +165,7 @@
     <!-- Hero Section -->
     <section class="banner text-white bg-gray-900">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-6xl font-bold mb-4">
+            <h1 id="dynamic-title" class="text-6xl font-bold mb-4">
                 Hello, I'm <span class="">Tanmoy Das</span>
             </h1>
             <p class="text-2xl mb-8">An Innovative Automobile Engineer with 10+ Years of Experience</p>
@@ -391,6 +393,24 @@
                 }
             });
         });
+
+        // Dynamic Title Animation
+        const dynamicTitle = document.getElementById('dynamic-title');
+        const titles = [
+            "Hello, I'm Tanmoy Das",
+            "An Automobile Engineer",
+            "A Passionate Innovator",
+            "Driving the Future"
+        ];
+        let currentIndex = 0;
+
+        function changeTitle() {
+            dynamicTitle.textContent = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+        }
+
+        // Change title every 3 seconds
+        setInterval(changeTitle, 3000);
     </script>
 </body>
 
