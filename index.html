@@ -1,126 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-the="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanmoy Das - Automobile Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Daisy UI & Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Font CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #ffffff;
-        }
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/c4e937c9d9.js" crossorigin="anonymous"></script>
 
-        .gradient-bg {
-            background: #131321;
-            /* Dark gray for gradient backgrounds */
-        }
 
-        .gradient-text {
-            color: #ffffff;
-        }
-
-        .section-hover:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease;
-        }
-
-        .animate-title {
-            animation: changeTitle 6s infinite;
-        }
-
-        @keyframes changeTitle {
-            0% {
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            33% {
-                opacity: 0;
-            }
-
-            53% {
-                opacity: 1;
-            }
-
-            66% {
-                opacity: 0;
-            }
-
-            86% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu {
-                display: block;
-            }
-
-            .desktop-menu {
-                display: none;
-            }
-        }
-
-        .banner {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #1f2937;
-            /* Dark gray for banner */
-        }
-
-        .mobile-nav {
-            background: #374151;
-            /* Dark gray for mobile nav */
-        }
-
-        .mobile-nav a {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .mobile-nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .footer {
-            background: #1f2937;
-            /* Dark gray for footer */
-        }
-
-        .footer a:hover {
-            color: #93c5fd;
-        }
-
-        .blog-bg {
-            background-image: url('assets/blog-bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section-divider {
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            margin: 4rem 0;
-        }
-
-        #blog {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.811), rgba(21, 21, 21, 0.229), rgba(0, 0, 0, 0.886)), url('./assets/blog.jpg');
-        }
-    </style>
 </head>
 
 <body class="scroll-smooth bg-gray-700">
@@ -390,7 +284,7 @@
     <div class="section-divider"></div>
 
     <!-- Blog Section -->
-    <section id="blog" class="py-16 blog-bg text-white bg-cover bg-center">
+    <section id="blog" class="py-16 text-white bg-cover bg-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-8">Blog</h2>
             <div class="text-center">
@@ -403,57 +297,38 @@
     <div class="section-divider"></div>
 
     <!-- Footer -->
-    <footer class="footer bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="hover:text-blue-300">LinkedIn</a>
-                <a href="#" class="hover:text-blue-300">Twitter</a>
-                <a href="#" class="hover:text-blue-300">GitHub</a>
+
+    <footer class="footer sm:footer-horizontal text-white p-10">
+        <nav>
+            <h6 class="footer-title">Navigations</h6>
+            <a class="link link-hover">About</a>
+            <a class="link link-hover">Biography</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Blog</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Professional Links</h6>
+            <a class="link link-hover">Experience</a>
+            <a class="link link-hover">Education</a>
+            <a class="link link-hover">Achievements</a>
+            <a class="link link-hover">Skills</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Social</h6>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://www.linkedin.com/in/tonmoy-das-mechanical-engineer/" target="_blank"><i
+                        class="fa-brands text-2xl fa-linkedin"></i></a>
+                <a href="" target="_blank"><i class="fa-brands text-2xl fa-github"></i></a>
+                <a href="" target="_blank"><i class="fa-brands text-2xl fa-facebook"></i></a>
             </div>
-            <p class="text-lg">&copy; 2023 Tanmoy Das. All rights reserved.</p>
-        </div>
+        </nav>
     </footer>
 
     <!-- JavaScript for Interactivity -->
     <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
 
-        menuToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-        });
-
-        // Scroll Animations
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight * 0.75) {
-                    section.classList.add('animate-fade-in');
-                }
-            });
-        });
-
-        // Dynamic Title Animation
-        const dynamicTitle = document.getElementById('dynamic-title');
-        const titles = [
-            "Hello, I'm Tanmoy Das",
-            "An Automobile Engineer",
-            "A Passionate Innovator",
-            "Driving the Future"
-        ];
-        let currentIndex = 0;
-
-        function changeTitle() {
-            dynamicTitle.textContent = titles[currentIndex];
-            currentIndex = (currentIndex + 1) % titles.length;
-        }
-
-        // Change title every 3 seconds
-        setInterval(changeTitle, 3000);
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
